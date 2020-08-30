@@ -11,5 +11,8 @@
       "cypress": "4.6.0",
       "node-cron": "^2.0.3",
       "npm": "^6.14.8"
+   },
+   "devDependencies": {
+      "cypress-terminal-report": "^1.4.2"
    }
 }

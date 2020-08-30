@@ -4,6 +4,8 @@ Hi !
 
 NPM : `https://nodejs.org/en/`
 
+Avoir le conseiller Capitaine d'activé
+
 GIT *(facultatif)* : `https://git-scm.com/download/win`
 
 ### <u>Télécharger le dossier :</u> 
@@ -18,8 +20,8 @@ GIT *(facultatif)* : `https://git-scm.com/download/win`
 3. Trouver le chemin d'accès de là où est stocké le dossier  (aller dans l'explorateur de fichiers, et cliquer sur la barre en haut pour voir le chemin complet (le chemin sera bleuté))
 4. écrire dans le terminal : `cd *le chemin d'accès*` (pour situer le terminal au niveau du dossier qui nous intéresse)
 5. écrire dans le terminal : `npm install` (pour installer les fichiers nécessaires pour que ça fonctionne ; prend quelques minutes )
-6. dans l'explorateur de fichier, modifier le fichier `grepolis > cypress > integration > farm_ressources.js` en mettant votre login et votre mot de passe dans les ' '  (2 premières ligne du fichier)
-7. dans le terminal, écrire `npm run report` 
+6. dans l'explorateur de fichier, modifier le fichier `grepolis > cypress.json` en mettant votre login et votre mot de passe dans les  " " 
+7. dans le terminal, écrire `node cron_jobs.js` 
 
 ### <u>Pour l'utiliser une autre fois :</u> 
 
