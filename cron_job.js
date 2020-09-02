@@ -2,11 +2,12 @@ var cron = require('node-cron');
 const {exec} = require('child_process');
 
 let date = new Date();
+let each = 11;
 console.log("Started CRON Job at " + date.getHours() + 'h:' + date.getMinutes() );
-console.log("It will farm camps every 6 minutes.\n\n")
+console.log("It will farm camps every " + each + " minutes.\n\n")
 
-//Lance la fonction toutes les 6 minutes (:00, :06, :12, :18, :24, :30, :36, :42, :48, :54)
-cron.schedule('*/6 * * * *', () => {
+//Lance la fonction toutes les 'each' minutes
+cron.schedule('*/' + each + ' * * * *', () => {
     let date = new Date();
     console.log('\nStarting farming  at ' + date.getHours() + 'h:' + date.getMinutes() + '...')
     exec('npm run report', (error, stdout, stderr) =>

@@ -37,13 +37,20 @@ context('processing...', () => {
     cy.wait(1000)
     cy.contains("Villages de paysans").click()
     cy.wait(1000)
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false
+  })
+    //Verify we did indeed farm ressources
+    //cy.get('#fto_claim_button').should('not.have.class', 'disabled')
 
-    //check if the button is disabled or not 
-    cy.get('#fto_claim_button').should('not.have.class', 'disabled')
-
-    //get ressources
+    //Select all
+    cy.get('.checkbox.select_all').click()
+    cy.wait(1000)
+    //Get ressources
     cy.get("#fto_claim_button").click()
     cy.wait(1000)
+    //Confirm
+    cy.contains('Oui').click()
 
     //Verify we did indeed farm ressources
     cy.get('#fto_claim_button').should('have.class', 'disabled')
